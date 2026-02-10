@@ -42,17 +42,17 @@ export function HeroSection() {
                         </span>
                     </motion.div>
 
-                    {/* 2. H1 - REDUZIDO: Fontes menores em telas médias e grandes para evitar quebras e colisões */}
+                    {/* 2. H1 - REDUZIDO EM ~15% GERAL */}
                     <motion.h1
                         variants={fadeInLeft}
                         className="
                             font-bold leading-[1.1] tracking-tight text-white mb-6 md:mb-8 max-w-6xl
-                            text-4xl           /* Mobile */
-                            sm:text-5xl        /* Mobile grande */
-                            md:text-4xl        /* Laptop pequeno (Reduzido de 5xl para 4xl) */
-                            lg:text-5xl        /* Monitor padrão (Reduzido de 6xl para 5xl) */
-                            xl:text-7xl        /* Monitor grande (Mantido) */
-                            2xl:text-[5.5rem]  /* Widescreen (Mantido) */
+                            text-[2rem]        /* Mobile (antes 4xl) ~32px */
+                            sm:text-4xl        /* Mobile grande (antes 5xl) ~36px */
+                            md:text-[2rem]     /* Laptop pequeno (antes 4xl) ~32px */
+                            lg:text-[2.5rem]   /* Monitor padrão (antes 5xl) ~40px */
+                            xl:text-6xl        /* Monitor grande (antes 7xl) ~60px */
+                            2xl:text-[4.75rem] /* Widescreen (antes 5.5rem) ~76px */
                         "
                     >
                         Sem Método, Você Só Cansa.<br className="hidden lg:block" />
