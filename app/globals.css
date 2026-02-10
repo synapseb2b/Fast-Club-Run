@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Cores: Fast Club Premium --- */
+  --color-primary: #ff4d00;
+  --color-primary-hover: #e64500;
+  --color-background: #ffffff;
+  --color-background-dark: #050505;
+  --color-text-main: #000000;
+  --color-text-muted: #ffffff80; /* Texto secundário em fundo escuro */
+  
+  /* --- Bordas --- */
+  --radius-pill: 9999px;
+  --radius-premium: 2.5rem;
+
+  /* --- Espaçamento (Axeris Scale) --- */
+  /* Espaçamento lateral MASSIVO para containers */
+  --spacing-container-mobile: 1.5rem;
+  --spacing-container-desktop: 8vw; /* ~115px em 1440p */
+}
+
+/* --- Base Reset & Typography --- */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-background-dark);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  overflow-x: hidden; /* Previne scroll lateral acidental */
+}
+
+/* --- Typography System --- */
+
+/* Hero Headline: Grande, ousada, mas controlada */
+.hero-headline {
+  font-size: clamp(2.75rem, 5.5vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: white;
+}
+
+/* Subtext: Leitura confortável e elegante */
+.hero-subtext {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* --- Layout Utilities --- */
+
+/* Container Principal da Hero:
+   Garante a margem lateral agressiva (respiro) sem deixar o conteúdo colar na borda.
+*/
+.container-hero {
+  width: 100%;
+  max-width: 1800px; /* Permite telas ultra-wide respirarem */
+  margin: 0 auto;
+  padding-left: var(--spacing-container-mobile);
+  padding-right: var(--spacing-container-mobile);
+}
+
+@media (min-width: 768px) {
+  .container-hero {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-hero {
+    padding-left: var(--spacing-container-desktop);
+    padding-right: var(--spacing-container-desktop);
+  }
+}
