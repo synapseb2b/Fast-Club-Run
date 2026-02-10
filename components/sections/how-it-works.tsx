@@ -29,7 +29,7 @@ const steps = [
 
 // Componente individual da Etapa para gerenciar seu próprio "ponto de vista"
 const StepItem = ({ step, index, activeStep, setActiveStep }: any) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null!);
   
   // margin: "-40% 0px -40% 0px" define uma "zona ativa" no centro da tela.
   // O elemento só é considerado "inView" quando está no meio 20% da viewport.
