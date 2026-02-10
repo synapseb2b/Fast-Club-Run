@@ -32,7 +32,7 @@ const benefits = [
     icon: Shield,
     title: "Construa Resiliência",
     description:
-      "Transforme autoconhecimento em performance superior, blindando seu corpo e sua mente contra lesões e desistências.",
+      "Treine sem lesão. A periodização certa protege seu corpo e mantém sua evolução constante, sem recomeçar do zero.",
     image: "/Image/Benefits 4.webp",
   },
 ];

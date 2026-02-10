@@ -55,8 +55,8 @@ export function HeroSection() {
                             2xl:text-[5.5rem]  /* Widescreen (Mantido) */
                         "
                     >
-                        Treine Mais Inteligente e Alcance seu <br className="hidden lg:block" />
-                        <span className="text-primary"> Potencial Máximo.</span>
+                        Sem Método, Você Só Cansa.<br className="hidden lg:block" />
+                        <span className="text-primary"> Com Método, Você Evolui.</span>
                     </motion.h1>
 
                     {/* 3. Texto de Apoio */}
@@ -64,8 +64,8 @@ export function HeroSection() {
                         variants={fadeInUp}
                         className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed mb-10 md:mb-16 max-w-xl md:max-w-2xl lg:max-w-3xl font-normal"
                     >
-                        Desbloqueie treinos personalizados, periodização inteligente e 
-                        acompanhamento real com a metodologia Wagner Figueiredo.
+                        Assessoria de corrida personalizada com Wagner Figueiredo 
+                        — 20+ anos transformando corredores.
                     </motion.p>
 
                     {/* 4. Linha Inferior */}

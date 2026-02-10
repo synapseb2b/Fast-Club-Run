@@ -21,7 +21,7 @@ const personas = [
     {
         title: "Atletas Autodidatas",
         description:
-            "Assuma o controle do seu próprio desenvolvimento, construa resiliência mental e otimize seu desempenho de forma independente.",
+            "Evolua com método mesmo treinando sozinho, sem depender de grupo presencial.",
         image: "/Image/Who Its For 3.webp",
     },
 ];
