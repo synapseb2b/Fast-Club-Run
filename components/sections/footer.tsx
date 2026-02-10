@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { Instagram, Linkedin } from "lucide-react"; // Opcional: Ícones sociais para compor
+import { Instagram } from "lucide-react"; 
 
 export function Footer() {
     const currentYear = 2026;
@@ -28,13 +27,16 @@ export function Footer() {
                         <a href="#faq" className="hover:text-white transition-colors duration-300">Dúvidas</a>
                     </nav>
 
-                    {/* Redes Sociais (Opcional - Visual) */}
+                    {/* Redes Sociais (Apenas Instagram) */}
                     <div className="flex gap-4">
-                        <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all duration-300">
+                        <a 
+                            href="https://www.instagram.com/fastclub.run/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all duration-300"
+                            aria-label="Instagram"
+                        >
                             <Instagram className="w-4 h-4" />
-                        </a>
-                        <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all duration-300">
-                            <Linkedin className="w-4 h-4" />
                         </a>
                     </div>
                 </div>

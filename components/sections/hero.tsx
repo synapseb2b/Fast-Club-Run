@@ -22,7 +22,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/30 to-transparent z-10" />
             </div>
 
-            {/* Adicionei 'pt-20' para garantir que o conteúdo não colida com o menu em laptops */}
+            {/* 'pt-20' mantido para segurança contra o menu */}
             <div className="w-full max-w-[1600px] mx-auto px-6 md:px-16 lg:px-24 relative z-20 h-full flex flex-col justify-center pt-20">
                 
                 <motion.div
@@ -42,17 +42,17 @@ export function HeroSection() {
                         </span>
                     </motion.div>
 
-                    {/* 2. H1 - AJUSTADO: Escalonamento mais suave para monitores intermediários */}
+                    {/* 2. H1 - REDUZIDO: Fontes menores em telas médias e grandes para evitar quebras e colisões */}
                     <motion.h1
                         variants={fadeInLeft}
                         className="
                             font-bold leading-[1.1] tracking-tight text-white mb-6 md:mb-8 max-w-6xl
-                            text-4xl           /* Mobile pequeno */
+                            text-4xl           /* Mobile */
                             sm:text-5xl        /* Mobile grande */
-                            md:text-5xl        /* Tablet / Laptop pequeno (Correção do problema) */
-                            lg:text-6xl        /* Monitor padrão */
-                            xl:text-7xl        /* Monitor grande */
-                            2xl:text-[5.5rem]  /* Widescreen (Mantido o original) */
+                            md:text-4xl        /* Laptop pequeno (Reduzido de 5xl para 4xl) */
+                            lg:text-5xl        /* Monitor padrão (Reduzido de 6xl para 5xl) */
+                            xl:text-7xl        /* Monitor grande (Mantido) */
+                            2xl:text-[5.5rem]  /* Widescreen (Mantido) */
                         "
                     >
                         Treine Mais Inteligente e Alcance seu <br className="hidden lg:block" />
