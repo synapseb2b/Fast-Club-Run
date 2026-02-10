@@ -10,32 +10,40 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Fast Club | Corra Melhor e Alcance Seu Máximo Potencial",
+    title: "Fast Club Run | Assessoria de Corrida com Método Comprovado — Wagner Figueiredo",
     description:
-        "Desbloqueie treinos personalizados, periodização inteligente e acompanhamento real com um método comprovado em 20 anos. Fast Club ajuda corredores a ir além de planilhas genéricas.",
+        "Treinos de corrida personalizados com periodização inteligente e acompanhamento real. Método comprovado em +20 anos pelo treinador Wagner Figueiredo. Do iniciante ao ultramaratonista — evolua com ciência e consistência.",
     keywords: [
         "corrida",
         "treino de corrida",
-        "planilha de treino",
-        "periodização",
-        "corredor",
-        "assessoria esportiva",
+        "planilha de treino personalizada",
+        "periodização de corrida",
+        "assessoria de corrida online",
+        "treinador de corrida",
         "Wagner Figueiredo",
+        "treino para maratona",
+        "treino para meia maratona",
+        "evolução na corrida",
+        "Fast Club Run",
+        "corrida para iniciantes",
+        "pace de corrida",
+        "planilha de corrida mensal",
+        "assessoria esportiva online",
     ],
-    authors: [{ name: "Fast Club" }],
+    authors: [{ name: "Fast Club Run" }],
     openGraph: {
-        title: "Fast Club | Corra Melhor e Alcance Seu Máximo Potencial",
+        title: "Fast Club Run | Assessoria de Corrida com Método Comprovado — Wagner Figueiredo",
         description:
-            "Desbloqueie treinos personalizados, periodização inteligente e acompanhamento real com um método comprovado em 20 anos.",
+            "Assessoria de corrida online com método comprovado em +20 anos. Treinos personalizados, periodização inteligente e acompanhamento real com Wagner Figueiredo.",
         type: "website",
         locale: "pt_BR",
-        siteName: "Fast Club",
+        siteName: "Fast Club Run",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Fast Club | Corra Melhor e Alcance Seu Máximo Potencial",
+        title: "Fast Club Run | Assessoria de Corrida com Método Comprovado — Wagner Figueiredo",
         description:
-            "Desbloqueie treinos personalizados, periodização inteligente e acompanhamento real com um método comprovado em 20 anos.",
+            "Assessoria de corrida online com método comprovado em +20 anos. Treinos personalizados, periodização inteligente e acompanhamento real com Wagner Figueiredo.",
     },
     icons: {
         icon: "/favicon/Logo_Fast_Clube_Black.ico",
