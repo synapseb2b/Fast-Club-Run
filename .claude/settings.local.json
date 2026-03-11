@@ -14,7 +14,9 @@
       "Bash(npx next build)",
       "Bash(ls:*)",
       "Bash(powershell -Command:*)",
-      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Cliente\\\\Documents\\\\GitHub\\\\clientes\\\\Fast Club Run\\\\rename.ps1\")"
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Cliente\\\\Documents\\\\GitHub\\\\clientes\\\\Fast Club Run\\\\rename.ps1\")",
+      "WebSearch",
+      "WebFetch(domain:docs.asaas.com)"
     ]
   }
 }
