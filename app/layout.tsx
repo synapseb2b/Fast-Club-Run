@@ -9,7 +9,7 @@ const inter = Inter({
     variable: "--font-inter",
 });
 
-const SITE_URL = "https://www.fastclubrun.com.br";
+const SITE_URL = "https://fastclub.run";
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),

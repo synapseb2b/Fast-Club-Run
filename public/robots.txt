@@ -4,4 +4,4 @@ Allow: /
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://www.fastclubrun.com.br/sitemap.xml
+Sitemap: https://fastclub.run/sitemap.xml
