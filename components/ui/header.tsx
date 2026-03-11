@@ -2,19 +2,36 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
     { href: "#how-it-works", label: "Como Funciona" },
     { href: "#who-its-for", label: "Para Quem" },
+    { href: "/corridas", label: "Corridas" },
+    { href: "/loja", label: "Loja" },
     { href: "#pricing", label: "Planos" },
     { href: "#faq", label: "Dúvidas" },
 ];
 
+function NavLink({ href, className, onClick, children }: { href: string; className?: string; onClick?: () => void; children: React.ReactNode }) {
+    const pathname = usePathname();
+    const isRoute = href.startsWith("/");
+    const isAnchor = href.startsWith("#");
+    const resolvedHref = isAnchor && pathname !== "/" ? `/${href}` : href;
+
+    if (isRoute) {
+        return <Link href={href} className={className} onClick={onClick}>{children}</Link>;
+    }
+    return <a href={resolvedHref} className={className} onClick={onClick}>{children}</a>;
+}
+
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,11 +52,11 @@ export function Header() {
                 <div className="w-full max-w-[1800px] mx-auto px-6 md:px-12 flex items-center justify-between">
                     
                     {/* 1. LOGO (Esquerda) */}
-                    <a href="#" className="relative z-50 shrink-0">
+                    <Link href="/" className="relative z-50 shrink-0">
                         <div className="text-2xl font-bold tracking-tighter text-white">
                             FAST CLUB<span className="text-primary">.</span>
                         </div>
-                    </a>
+                    </Link>
 
                     {/* 2. CÁPSULA DE NAVEGAÇÃO (Centro - Desktop) */}
                     {/* Exibe apenas em telas grandes (lg) */}
@@ -50,23 +67,23 @@ export function Header() {
                         {/* Links */}
                         <nav className="flex items-center gap-6 mr-6">
                             {navLinks.map((link) => (
-                                <a
+                                <NavLink
                                     key={link.href}
                                     href={link.href}
                                     className="text-sm font-medium text-black/70 hover:text-black transition-colors"
                                 >
                                     {link.label}
-                                </a>
+                                </NavLink>
                             ))}
                         </nav>
 
                         {/* CTA Button (Dentro da Cápsula) */}
-                        <a
+                        <NavLink
                             href="#pricing"
                             className="bg-primary hover:bg-primary-hover text-white rounded-full px-6 py-2.5 text-sm font-bold transition-all duration-300 shadow-lg shadow-primary/30 hover:shadow-primary/50"
                         >
                             Começar Agora
-                        </a>
+                        </NavLink>
                     </div>
 
                     {/* 3. MENU MOBILE (Direita - Mobile/Tablet) */}
@@ -105,32 +122,35 @@ export function Header() {
                         {/* Links Mobile */}
                         <nav className="flex flex-col gap-8 text-center">
                             {navLinks.map((link, i) => (
-                                <motion.a
+                                <motion.div
                                     key={link.href}
-                                    href={link.href}
-                                    onClick={() => setIsMobileMenuOpen(false)}
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="text-3xl font-bold text-white hover:text-primary transition-colors"
                                 >
-                                    {link.label}
-                                </motion.a>
+                                    <NavLink
+                                        href={link.href}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="text-3xl font-bold text-white hover:text-primary transition-colors"
+                                    >
+                                        {link.label}
+                                    </NavLink>
+                                </motion.div>
                             ))}
-                            
+
                             <motion.div
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.4 }}
+                                transition={{ delay: 0.6 }}
                                 className="mt-8"
                             >
-                                <a
+                                <NavLink
                                     href="#pricing"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold shadow-[0_0_30px_rgba(255,77,0,0.4)]"
                                 >
                                     Começar Agora
-                                </a>
+                                </NavLink>
                             </motion.div>
                         </nav>
                     </motion.div>

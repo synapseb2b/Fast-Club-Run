@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Instagram } from "lucide-react"; 
+import Link from "next/link";
+import { Instagram } from "lucide-react";
 
 export function Footer() {
     const currentYear = 2026;
@@ -20,11 +21,13 @@ export function Footer() {
                     </div>
 
                     {/* Links de Navegação */}
-                    <nav className="flex gap-8 text-sm font-medium text-white/50">
-                        <a href="#how-it-works" className="hover:text-white transition-colors duration-300">Metodologia</a>
-                        <a href="#who-its-for" className="hover:text-white transition-colors duration-300">Para Quem</a>
-                        <a href="#pricing" className="hover:text-white transition-colors duration-300">Planos</a>
-                        <a href="#faq" className="hover:text-white transition-colors duration-300">Dúvidas</a>
+                    <nav className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium text-white/50">
+                        <a href="/#how-it-works" className="hover:text-white transition-colors duration-300">Metodologia</a>
+                        <a href="/#who-its-for" className="hover:text-white transition-colors duration-300">Para Quem</a>
+                        <Link href="/corridas" className="hover:text-white transition-colors duration-300">Corridas</Link>
+                        <Link href="/loja" className="hover:text-white transition-colors duration-300">Loja</Link>
+                        <a href="/#pricing" className="hover:text-white transition-colors duration-300">Planos</a>
+                        <a href="/#faq" className="hover:text-white transition-colors duration-300">Dúvidas</a>
                     </nav>
 
                     {/* Redes Sociais (Apenas Instagram) */}

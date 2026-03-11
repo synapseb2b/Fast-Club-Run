@@ -23,7 +23,10 @@
       "Bash(python \"C:/Users/Cliente/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/7db6e932-c36b-4500-9fa5-18e255ca8c08/735e185b-e4c2-4d4f-8145-2302fcce8bd6/skills/docx/scripts/office/validate.py\" docs/01-Copy-Completa-do-Site.docx)",
       "Bash(python \"C:/Users/Cliente/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/7db6e932-c36b-4500-9fa5-18e255ca8c08/735e185b-e4c2-4d4f-8145-2302fcce8bd6/skills/docx/scripts/office/validate.py\" docs/02-Logica-Conceitual-do-Site.docx)",
       "Bash(python \"C:/Users/Cliente/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/7db6e932-c36b-4500-9fa5-18e255ca8c08/735e185b-e4c2-4d4f-8145-2302fcce8bd6/skills/docx/scripts/office/validate.py\" docs/03-Descritivo-Tecnico-do-Site.docx)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(find /c/Users/Cliente/GitHub/clientes/Fast-Club-Run -name tailwind.config.* -type f)",
+      "WebFetch(domain:docs.google.com)",
+      "Bash(pandoc \"D:/Dados/Documentos/Downloads/FastClub_Revenue_Playbook.docx\" -t markdown --wrap=none)"
     ]
   }
 }
