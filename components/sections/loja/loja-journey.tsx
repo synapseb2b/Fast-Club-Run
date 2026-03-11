@@ -11,14 +11,14 @@ const journeyCards = [
         headline: "Seu primeiro passo merece ser marcado.",
         description:
             "Você está começando a correr e merece se sentir parte de algo maior. Nossos produtos para iniciantes celebram cada quilômetro conquistado.",
-        image: "/Image/Testimonial_Ana L..webp",
+        image: "/Image/Produtos_Fast_Club_Run/camiseta_iniciante_feminino.webp",
     },
     {
         level: "Pro",
         headline: "Você treina como profissional. Vista-se como um.",
         description:
             "Para quem já compete e busca evolução constante. Produtos que representam sua dedicação e performance.",
-        image: "/Image/Benefits 3.webp",
+        image: "/Image/Produtos_Fast_Club_Run/camiseta_pro_feminino.webp",
     },
 ];
 
