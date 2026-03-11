@@ -37,8 +37,8 @@ export function CTASection() {
                         variants={fadeInUp}
                         className="text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight leading-[1] text-white mb-12"
                     >
-                        Comece a<span className="text-primary">Treinar com Método</span> <br />
-                        hoje.
+                        Comece a <span className="text-primary">Treinar</span> <br />
+                        <span className="text-primary">com Método</span> hoje.
                     </motion.h2>
 
                     {/* CTA Button - Padrão Axeris (Idêntico à Hero) */}

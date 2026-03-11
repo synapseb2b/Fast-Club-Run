@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Quote, ArrowLeft, ArrowRight } from "lucide-react"; // Usei setas mais elegantes
+import { Quote, ArrowLeft, ArrowRight } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const testimonials = [
@@ -39,18 +39,29 @@ const testimonials = [
 
 export function TestimonialsSection() {
     const [activeIndex, setActiveIndex] = useState(0);
+    const touchStartX = useRef(0);
 
     const next = () => setActiveIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1));
     const prev = () => setActiveIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1));
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+        if (deltaX < -60) next();
+        if (deltaX > 60) prev();
+    };
+
     return (
         <section className="py-24 md:py-32 bg-[#fafafa] text-black overflow-hidden border-t border-neutral-200">
-            
+
             {/* Container Principal Alinhado à Esquerda */}
             <div className="w-full max-w-[1800px] mx-auto px-6 md:px-16 lg:px-24">
-                
+
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-                    
+
                     {/* --- COLUNA ESQUERDA: Cabeçalho Fixo (Nível 1) --- */}
                     <div className="lg:col-span-5 sticky top-32">
                         <motion.div
@@ -61,7 +72,7 @@ export function TestimonialsSection() {
                             viewport={{ once: true, margin: "-100px" }}
                         >
                             {/* Badge Pill Laranja */}
-                            <motion.div 
+                            <motion.div
                                 variants={fadeInUp}
                                 className="mb-8 px-5 py-1.5 border border-primary/30 rounded-full bg-white text-primary inline-block"
                             >
@@ -71,16 +82,16 @@ export function TestimonialsSection() {
                             </motion.div>
 
                             {/* Título */}
-                            <motion.h2 
-                                variants={fadeInUp} 
+                            <motion.h2
+                                variants={fadeInUp}
                                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-black mb-8"
                             >
                                 Histórias reais de <br />
                                 <span className="text-primary">Evolução Constante.</span>
                             </motion.h2>
 
-                            {/* Controles de Navegação (Setas) */}
-                            <motion.div variants={fadeInUp} className="flex gap-4 mt-4">
+                            {/* Controles de Navegação (Setas) - Visíveis apenas no desktop */}
+                            <motion.div variants={fadeInUp} className="hidden lg:flex gap-4 mt-4">
                                 <button
                                     onClick={prev}
                                     className="w-14 h-14 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 group"
@@ -100,7 +111,11 @@ export function TestimonialsSection() {
                     </div>
 
                     {/* --- COLUNA DIREITA: Card de Depoimento (Nível 2) --- */}
-                    <div className="lg:col-span-7 relative min-h-[400px]">
+                    <div
+                        className="lg:col-span-7 relative min-h-[400px]"
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                    >
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIndex}
@@ -115,7 +130,7 @@ export function TestimonialsSection() {
 
                                 {/* Texto do Depoimento */}
                                 <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed text-black mb-10">
-                                    "{testimonials[activeIndex].fullQuote}"
+                                    &ldquo;{testimonials[activeIndex].fullQuote}&rdquo;
                                 </blockquote>
 
                                 {/* Info do Aluno */}
@@ -139,9 +154,25 @@ export function TestimonialsSection() {
                                 </div>
                             </motion.div>
                         </AnimatePresence>
-                        
-                        {/* Indicador de Paginação Discreto */}
-                        <div className="absolute -bottom-10 right-0 text-sm font-medium text-black/30">
+
+                        {/* Dots de Paginação - Mobile */}
+                        <div className="flex justify-center gap-2 mt-8 lg:hidden">
+                            {testimonials.map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setActiveIndex(i)}
+                                    className={`rounded-full transition-all duration-300 ${
+                                        i === activeIndex
+                                            ? "bg-primary w-6 h-2"
+                                            : "bg-black/20 w-2 h-2 hover:bg-black/40"
+                                    }`}
+                                    aria-label={`Depoimento ${i + 1}`}
+                                />
+                            ))}
+                        </div>
+
+                        {/* Indicador de Paginação Discreto - Desktop */}
+                        <div className="hidden lg:block absolute -bottom-10 right-0 text-sm font-medium text-black/30">
                             {String(activeIndex + 1).padStart(2, '0')} — {String(testimonials.length).padStart(2, '0')}
                         </div>
                     </div>

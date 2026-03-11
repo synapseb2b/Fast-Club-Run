@@ -7,6 +7,17 @@ import { ButtonLink } from "@/components/ui/button";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
+// --- LINKS DE CHECKOUT ASAAS ---
+// Substitua pelos links reais gerados no painel do Asaas (asaas.com)
+// Enquanto os links não estiverem prontos, redireciona para WhatsApp como fallback
+const ASAAS_CHECKOUT_LINKS: Record<string, string> = {
+    pace: "",    // Cole aqui o link do Asaas para o plano Pace
+    sprint: "",  // Cole aqui o link do Asaas para o plano Sprint
+    pro: "",     // Cole aqui o link do Asaas para o plano Pro
+};
+
+const WHATSAPP_PHONE = "5531992186683";
+
 // --- DADOS DOS PLANOS ---
 const plans = [
     {
@@ -94,15 +105,20 @@ function RecommendationModal({ isOpen, onClose }: any) {
         }
     };
 
-    const sendToWhatsApp = () => {
-        const phone = "5531992186683";
-        const message = `Olá Wagner! Fiz o teste no site e meu perfil é:
+    const goToCheckout = () => {
+        const asaasLink = ASAAS_CHECKOUT_LINKS[recommendedPlan.id];
+        if (asaasLink) {
+            // Redireciona para checkout Asaas
+            window.open(asaasLink, '_blank');
+        } else {
+            // Fallback: WhatsApp enquanto links Asaas não estão configurados
+            const message = `Olá Wagner! Fiz o teste no site e meu perfil é:
 1. ${answers.autonomy === 'independent' ? 'Gosto de autonomia' : answers.autonomy === 'feedback' ? 'Quero feedbacks' : 'Preciso de acompanhamento próximo'}.
 2. ${answers.goal === 'fitness' ? 'Busco saúde/fitness' : 'Busco performance/prova'}.
 
 O site recomendou o plano *${recommendedPlan.name}*. Gostaria de saber mais!`;
-        
-        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+            window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, '_blank');
+        }
         onClose();
         setTimeout(() => { setStep(1); setRecommendedPlan(null); }, 500);
     };
@@ -168,14 +184,14 @@ O site recomendou o plano *${recommendedPlan.name}*. Gostaria de saber mais!`;
                                     <p className="text-sm text-white/70 leading-relaxed">{recommendedPlan.description}</p>
                                 </div>
 
-                                <button 
-                                    onClick={sendToWhatsApp}
-                                    className="w-full bg-[#25D366] hover:bg-[#1ebc57] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-all transform hover:scale-[1.02]"
+                                <button
+                                    onClick={goToCheckout}
+                                    className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-all transform hover:scale-[1.02]"
                                 >
-                                    <MessageCircle className="w-5 h-5" />
-                                    Falar com Wagner no WhatsApp
+                                    <ArrowRight className="w-5 h-5" />
+                                    Assinar {recommendedPlan.name}
                                 </button>
-                                <p className="text-[10px] text-white/30 mt-3 uppercase tracking-widest">Enviaremos suas respostas automaticamente</p>
+                                <p className="text-[10px] text-white/30 mt-3 uppercase tracking-widest">Pagamento seguro via Asaas</p>
                             </motion.div>
                         )}
                     </AnimatePresence>
@@ -198,11 +214,13 @@ const OptionButton = ({ title, subtitle, onClick }: any) => (
 export function PricingSection() {
     const [isQuizOpen, setIsQuizOpen] = useState(false);
 
-    // Função para link direto do WhatsApp (caso o usuário clique no card do grid em vez do quiz)
-    const getDirectLink = (planName: string) => {
-        const phone = "5531992186683";
-        const message = `Olá Wagner! Vi o plano *${planName}* no site e gostaria de tirar dúvidas para assinar.`;
-        return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    // Link de checkout: Asaas se configurado, senão fallback para WhatsApp
+    const getCheckoutLink = (planId: string, planName: string) => {
+        const asaasLink = ASAAS_CHECKOUT_LINKS[planId];
+        if (asaasLink) return asaasLink;
+        // Fallback: WhatsApp enquanto links Asaas não estão configurados
+        const message = `Olá Wagner! Vi o plano *${planName}* no site e gostaria de assinar.`;
+        return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
     };
 
     return (
@@ -269,7 +287,7 @@ export function PricingSection() {
 
                             {/* Link direto para quem já decidiu */}
                             <ButtonLink
-                                href={getDirectLink(plan.name)}
+                                href={getCheckoutLink(plan.id, plan.name)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 variant={plan.popular ? "primary" : "outline"}
