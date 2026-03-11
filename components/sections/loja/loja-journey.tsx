@@ -12,6 +12,7 @@ const journeyCards = [
         description:
             "Você está começando a correr e merece se sentir parte de algo maior. Nossos produtos para iniciantes celebram cada quilômetro conquistado.",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_iniciante_feminino.webp",
+        objectPosition: "center 20%",
     },
     {
         level: "Pro",
@@ -19,6 +20,7 @@ const journeyCards = [
         description:
             "Para quem já compete e busca evolução constante. Produtos que representam sua dedicação e performance.",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_pro_feminino.webp",
+        objectPosition: "center 15%",
     },
 ];
 
@@ -82,6 +84,7 @@ export function LojaJourney() {
                                 alt={card.headline}
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                style={{ objectPosition: card.objectPosition }}
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
 
