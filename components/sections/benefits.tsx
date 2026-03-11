@@ -32,7 +32,7 @@ const benefits = [
     icon: Shield,
     title: "Construa Resiliência",
     description:
-      "Treine sem lesão. A periodização certa protege seu corpo e mantém sua evolução constante, sem recomeçar do zero.",
+      "Treine com constância. A periodização certa protege seu corpo e mantém sua evolução constante.",
     image: "/Image/Benefits 4.webp",
   },
 ];
@@ -45,9 +45,9 @@ export function BenefitsSection() {
       <div className="w-full max-w-[1800px] mx-auto px-6 md:px-16 lg:px-24">
         
         {/* --- NÍVEL 1: CABEÇALHO --- */}
-        <div className="flex flex-col items-start mb-20 md:mb-24">
+        <div className="flex flex-col items-center text-center mb-20 md:mb-24">
           <motion.div
-            className="w-full flex flex-col items-start text-left"
+            className="w-full flex flex-col items-center text-center"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -68,7 +68,7 @@ export function BenefitsSection() {
               variants={fadeInUp} 
               className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-white max-w-4xl"
             >
-              Desbloqueie seu <span className="text-primary">máximo potencial</span> e construa força mental duradoura.
+              Desbloqueie seu <span className="text-primary">potencial máximo</span> e construa força mental duradoura.
             </motion.h2>
           </motion.div>
         </div>

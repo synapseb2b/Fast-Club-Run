@@ -7,21 +7,21 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const personas = [
     {
-        title: "Atletas Competitivos",
+        title: "Para Quem Quer Começar",
         description:
-            "Obtenha clareza sobre periodização e volume para manter a consistência e superar seus recordes.",
+            "Você é sedentário ou nunca correu? O Fast Club te guia do zero ao seu primeiro quilômetro com segurança e um plano feito para você.",
         image: "/Image/Who Its For 1.webp",
     },
     {
-        title: "Atletas do dia a dia",
+        title: "Para Quem Quer Evoluir",
         description:
-            "Treine de forma mais inteligente e desfrute de progressos mensuráveis, mesmo fora de programas profissionais.",
+            "Você já corre, mas sente que pode mais? Melhore sua performance com periodização inteligente e progressão real.",
         image: "/Image/Who Its For 2.webp",
     },
     {
-        title: "Atletas Autodidatas",
+        title: "Para Quem Quer Competir",
         description:
-            "Evolua com método mesmo treinando sozinho, sem depender de grupo presencial.",
+            "Obtenha clareza sobre periodização e volume para manter a consistência e superar seus recordes.",
         image: "/Image/Who Its For 3.webp",
     },
 ];
@@ -58,8 +58,8 @@ export function WhoItsForSection() {
                             variants={fadeInUp} 
                             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-[1.05] text-white max-w-6xl"
                         >
-                            Feito para todo corredor que quer <br className="hidden lg:block" />
-                            <span className="text-white">atingir seu potencial máximo.</span>
+                            Feito para todas as pessoas que querem <br className="hidden lg:block" />
+                            <span className="text-white">alcançar seu potencial máximo na corrida.</span>
                         </motion.h2>
                     </motion.div>
                 </div>

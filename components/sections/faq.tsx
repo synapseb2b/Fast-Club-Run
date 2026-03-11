@@ -11,7 +11,12 @@ const faqs = [
     {
         question: "Isso é só para corredores profissionais?",
         answer:
-            "De jeito nenhum. Fast Club é para qualquer pessoa que quer correr com método — do iniciante ao competidor experiente. Todo mundo pode se beneficiar de treinos periodizados e personalizados.",
+            "De jeito nenhum. Fast Club é para qualquer pessoa que quer correr com método — do sedentário ao competidor experiente. Todo mundo pode se beneficiar de treinos periodizados e personalizados.",
+    },
+    {
+        question: "Como funciona a cobrança?",
+        answer:
+            "A cobrança é mensal e recorrente. Todo mês o valor do seu plano é cobrado automaticamente. Não há fidelidade nem contrato de permanência — você pode cancelar a qualquer momento.",
     },
     {
         question: "Quanto tempo leva para receber meu plano?",
@@ -24,14 +29,19 @@ const faqs = [
             "Nenhuma experiência prévia é necessária. O Fast Club foi criado para ser simples e prático, com orientações claras que qualquer pessoa consegue entender e aplicar.",
     },
     {
-        question: "Posso acompanhar meu progresso?",
+        question: "Como acompanhar meu progresso?",
         answer:
-            "Sim. Todo mês você recebe um novo plano ajustado à sua evolução. Sua área exclusiva mostra seu histórico completo e progresso acumulado em gráficos simples.",
+            "Todo mês você recebe um novo plano ajustado à sua evolução. Use ferramentas como Strava ou Garmin para acompanhar suas métricas e visualizar seu progresso ao longo do tempo.",
+    },
+    {
+        question: "Como cancelo minha assinatura?",
+        answer:
+            "Você pode cancelar a qualquer momento pelo WhatsApp, sem taxas e sem burocracia. O cancelamento é imediato e você mantém acesso até o fim do período já pago.",
     },
     {
         question: "Meus dados estão seguros?",
         answer:
-            "100%. Seus dados são protegidos e acessíveis apenas por você. Suas informações pessoais nunca são compartilhadas sem seu consentimento expresso.",
+            "Sim. Seus dados são protegidos e nunca são compartilhados sem seu consentimento.",
     },
     {
         question: "Com que frequência devo usar?",

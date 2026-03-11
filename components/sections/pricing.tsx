@@ -19,7 +19,8 @@ const plans = [
             "Plano mensal periodizado",
             "Personalizado para seu nível",
             "Metodologia Wagner Figueiredo",
-            "Entrega via app exclusivo",
+            "Anamnese personalizada",
+            "Dicas nutricionais",
         ],
         cta: "Assinar Pace",
         popular: false,
@@ -33,8 +34,9 @@ const plans = [
         features: [
             "Tudo do Pace +",
             "Suporte via WhatsApp",
-            "Ajustes ilimitados",
+            "Ajustes às necessidades",
             "Feedback de treinos",
+            "Anamnese mensal",
             "Suporte prioritário",
         ],
         cta: "Assinar Sprint",
@@ -148,7 +150,7 @@ O site recomendou o plano *${recommendedPlan.name}*. Gostaria de saber mais!`;
                             <motion.div key="step2" initial={{ x: 20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -20, opacity: 0 }}>
                                 <h4 className="text-lg md:text-xl font-medium text-white mb-6">Qual seu principal objetivo agora?</h4>
                                 <div className="space-y-3">
-                                    <OptionButton onClick={() => handleOptionClick('goal', 'fitness')} title="Saúde e Constância" subtitle="Quero emagrecer ou manter a rotina sem lesões." />
+                                    <OptionButton onClick={() => handleOptionClick('goal', 'fitness')} title="Saúde e Constância" subtitle="Quero emagrecer ou manter uma rotina consistente." />
                                     <OptionButton onClick={() => handleOptionClick('goal', 'performance')} title="Superar meu Recorde" subtitle="Quero baixar meu tempo nos 5k, 10k, 21k ou 42k." />
                                     <OptionButton onClick={() => handleOptionClick('goal', 'high_stakes')} title="Desafio Extremo / Elite" subtitle="Estou treinando para algo grande e não posso errar." />
                                 </div>
@@ -281,7 +283,7 @@ export function PricingSection() {
                     ))}
                 </motion.div>
 
-                <p className="text-center mt-16 text-xs font-bold text-black/30 uppercase tracking-[0.2em]">Pagamento seguro · Cancelamento fácil · Suporte via WhatsApp</p>
+                <p className="text-center mt-16 text-xs font-bold text-black/30 uppercase tracking-[0.2em]">Pagamento seguro · Cancelamento fácil · Sem fidelidade · Suporte via WhatsApp</p>
             </div>
 
             {/* Renderiza o Modal do Quiz */}

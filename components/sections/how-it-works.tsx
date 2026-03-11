@@ -23,7 +23,7 @@ const steps = [
   {
     number: "04",
     title: "Otimize Resultados",
-    description: "Receba revisões periódicas para garantir progresso sem lesões e recordes reais.",
+    description: "Receba revisões periódicas para garantir progresso constante e resultados reais.",
   },
 ];
 
@@ -108,34 +108,28 @@ export function HowItWorksSection() {
       <div className="w-full max-w-[1600px] mx-auto px-6 md:px-16 lg:px-24">
         
         {/* --- NÍVEL 1: CABEÇALHO --- */}
-        <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24 items-start"
+        <motion.div
+          className="flex flex-col items-center text-center mb-24"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* Badge Alinhado à Esquerda */}
-          <div className="lg:col-span-3">
-            <motion.div 
-              variants={fadeInUp}
-              className="px-5 py-1.5 border border-primary/30 rounded-full bg-white text-primary inline-block"
-            >
-              <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">
-                Como funciona
-              </span>
-            </motion.div>
-          </div>
+          <motion.div
+            variants={fadeInUp}
+            className="mb-8 px-5 py-1.5 border border-primary/30 rounded-full bg-white text-primary inline-block"
+          >
+            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">
+              Como funciona
+            </span>
+          </motion.div>
 
-          {/* Texto Descritivo */}
-          <div className="lg:col-span-9">
-            <motion.h2 
-              variants={fadeInUp} 
-              className="text-3xl md:text-5xl font-medium leading-tight text-black max-w-4xl"
-            >
-              Quatro passos simples para desbloquear seu melhor desempenho: Compreenda a si mesmo, aplique os insights e acompanhe o progresso.
-            </motion.h2>
-          </div>
+          <motion.h2
+            variants={fadeInUp}
+            className="text-3xl md:text-5xl font-medium leading-tight text-black max-w-4xl"
+          >
+            Quatro passos simples para desbloquear seu melhor desempenho: Compreenda a si mesmo, aplique os insights e acompanhe o progresso.
+          </motion.h2>
         </motion.div>
 
 
