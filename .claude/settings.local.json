@@ -16,7 +16,9 @@
       "Bash(powershell -Command:*)",
       "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Cliente\\\\Documents\\\\GitHub\\\\clientes\\\\Fast Club Run\\\\rename.ps1\")",
       "WebSearch",
-      "WebFetch(domain:docs.asaas.com)"
+      "WebFetch(domain:docs.asaas.com)",
+      "Bash(test -f public/robots.txt)",
+      "Bash(test -f public/sitemap.xml)"
     ]
   }
 }

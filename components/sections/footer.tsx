@@ -56,7 +56,7 @@ export function Footer() {
                     <p className="text-xs text-white/30 font-medium tracking-wide uppercase flex flex-col md:flex-row items-center gap-1 md:gap-2">
                         <span>Desenvolvido por</span>
                         <a 
-                            href="https://www.synapseb2b.com/ativos-de-performance/" 
+                            href="https://www.synapseb2b.com/" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="text-white/80 hover:text-primary transition-colors border-b border-white/20 hover:border-primary pb-0.5"

@@ -1,0 +1,19 @@
+{
+    "name": "Fast Club Run — Assessoria de Corrida",
+    "short_name": "Fast Club Run",
+    "description": "Assessoria de corrida online com método comprovado. Treinos personalizados e periodização inteligente com Wagner Figueiredo.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#ff4d00",
+    "orientation": "portrait",
+    "lang": "pt-BR",
+    "icons": [
+        {
+            "src": "/logo/Logo_Fast_Clube_Black_Orange.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

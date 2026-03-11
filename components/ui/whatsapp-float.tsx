@@ -3,7 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_LINK = "https://wa.me/5531992186683";
+const WHATSAPP_PHONE = "5531992186683";
+const WHATSAPP_MESSAGE = "Olá! Vi o site do Fast Club e gostaria de saber mais sobre a assessoria de corrida.";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export function WhatsAppFloat() {
     return (

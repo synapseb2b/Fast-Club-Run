@@ -73,17 +73,14 @@ export function Header() {
                     {/* Botão "Menu" estilo pílula branca */}
                     <button
                         onClick={() => setIsMobileMenuOpen(true)}
+                        aria-label="Abrir menu de navegação"
                         className="lg:hidden bg-white text-black px-5 py-2 rounded-full text-sm font-bold shadow-lg hover:scale-105 transition-transform"
                     >
                         Menu
                     </button>
 
-                    {/* Link "Contato" ou Login (Direita - Desktop) - Opcional para balancear */}
-                    <div className="hidden lg:block w-[140px] text-right">
-                         <a href="#" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
-                            Área do Aluno
-                        </a>
-                    </div>
+                    {/* Espaçador para balancear o layout (mesmo width do lado esquerdo) */}
+                    <div className="hidden lg:block w-[140px]" />
                 </div>
             </motion.header>
 
@@ -99,6 +96,7 @@ export function Header() {
                         {/* Botão Fechar */}
                         <button
                             onClick={() => setIsMobileMenuOpen(false)}
+                            aria-label="Fechar menu"
                             className="absolute top-8 right-8 bg-white/10 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
                         >
                             ✕

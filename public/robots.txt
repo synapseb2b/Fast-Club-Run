@@ -1,0 +1,7 @@
+# Fast Club Run - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://www.fastclubrun.com.br/sitemap.xml
