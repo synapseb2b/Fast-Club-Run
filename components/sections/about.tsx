@@ -53,7 +53,7 @@ export function AboutSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-[1.1] text-black"
           >
             Performance não é só físico, <br />
-            <span className="text-black">Começa no método.</span>
+            <span className="text-primary">Começa no método.</span>
           </motion.h2>
 
           {/* Parágrafo */}

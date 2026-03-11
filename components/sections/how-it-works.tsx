@@ -128,8 +128,16 @@ export function HowItWorksSection() {
             variants={fadeInUp}
             className="text-3xl md:text-5xl font-medium leading-tight text-black max-w-4xl"
           >
-            Quatro passos simples para desbloquear seu melhor desempenho: Compreenda a si mesmo, aplique os insights e acompanhe o progresso.
+            Quatro passos simples para <br className="hidden md:block" />
+            <span className="text-primary">desbloquear seu melhor desempenho.</span>
           </motion.h2>
+
+          <motion.p
+            variants={fadeInUp}
+            className="mt-6 text-base md:text-lg text-neutral-500 leading-relaxed max-w-2xl"
+          >
+            Compreenda a si mesmo, aplique os insights e acompanhe o progresso.
+          </motion.p>
         </motion.div>
 
 

@@ -64,11 +64,12 @@ export function BenefitsSection() {
             </motion.div>
 
             {/* Título Principal - Alinhado à Esquerda */}
-            <motion.h2 
-              variants={fadeInUp} 
-              className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-white max-w-4xl"
+            <motion.h2
+              variants={fadeInUp}
+              className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-white max-w-5xl"
             >
-              Desbloqueie seu <span className="text-primary">potencial máximo</span> e construa força mental duradoura.
+              Desbloqueie seu potencial máximo e <br className="hidden md:block" />
+              <span className="text-primary">construa força mental duradoura.</span>
             </motion.h2>
           </motion.div>
         </div>

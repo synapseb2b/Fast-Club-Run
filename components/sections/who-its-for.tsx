@@ -59,7 +59,7 @@ export function WhoItsForSection() {
                             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-[1.05] text-white max-w-6xl"
                         >
                             Feito para todas as pessoas que querem <br className="hidden lg:block" />
-                            <span className="text-white">alcançar seu potencial máximo na corrida.</span>
+                            <span className="text-primary">alcançar seu potencial máximo na corrida.</span>
                         </motion.h2>
                     </motion.div>
                 </div>
