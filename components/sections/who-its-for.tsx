@@ -54,12 +54,12 @@ export function WhoItsForSection() {
 
                         {/* Título Principal - Liberado Horizontalmente */}
                         {/* max-w-6xl permite que o texto se estenda bastante antes de quebrar */}
-                        <motion.h2 
-                            variants={fadeInUp} 
+                        <motion.h2
+                            variants={fadeInUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-[1.05] text-white max-w-6xl"
                         >
-                            Feito para todas as pessoas que querem <br className="hidden lg:block" />
-                            <span className="text-primary">alcançar seu potencial máximo na corrida.</span>
+                            Feito para quem quer <br className="hidden lg:block" />
+                            <span className="text-primary">correr no seu melhor.</span>
                         </motion.h2>
                     </motion.div>
                 </div>

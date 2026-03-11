@@ -10,6 +10,7 @@ import { PricingSection } from "@/components/sections/pricing";
 import { FAQSection } from "@/components/sections/faq";
 import { CTASection } from "@/components/sections/cta";
 import { Footer } from "@/components/sections/footer";
+import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 
 export default function Home() {
     return (
@@ -28,6 +29,7 @@ export default function Home() {
                 <CTASection />
             </main>
             <Footer />
+            <WhatsAppFloat />
         </>
     );
 }

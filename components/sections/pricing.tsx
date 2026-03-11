@@ -8,12 +8,10 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
 // --- LINKS DE CHECKOUT ASAAS ---
-// Substitua pelos links reais gerados no painel do Asaas (asaas.com)
-// Enquanto os links não estiverem prontos, redireciona para WhatsApp como fallback
 const ASAAS_CHECKOUT_LINKS: Record<string, string> = {
-    pace: "",    // Cole aqui o link do Asaas para o plano Pace
-    sprint: "",  // Cole aqui o link do Asaas para o plano Sprint
-    pro: "",     // Cole aqui o link do Asaas para o plano Pro
+    pace: "https://www.asaas.com/c/oq9y081g7fdc5hrc",
+    sprint: "https://www.asaas.com/c/8jlo1dspbarnbixz",
+    pro: "https://www.asaas.com/c/za21naqlm4zgoq5j",
 };
 
 const WHATSAPP_PHONE = "5531992186683";
