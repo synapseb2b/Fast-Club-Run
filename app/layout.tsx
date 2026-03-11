@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: SITE_URL,
         images: [
             {
-                url: "/logo/Logo_Fast_Clube_Black_Orange.png",
+                url: "/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Fast Club Run — Assessoria de Corrida com Método Comprovado",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
         title: "Fast Club Run | Assessoria de Corrida com Método Comprovado",
         description:
             "Assessoria de corrida online com método comprovado em +20 anos. Treinos personalizados, periodização inteligente e acompanhamento real com Wagner Figueiredo.",
-        images: ["/logo/Logo_Fast_Clube_Black_Orange.png"],
+        images: ["/og-image.png"],
     },
     icons: {
         icon: "/favicon/Logo_Fast_Clube_Black.ico",
@@ -93,7 +93,7 @@ const jsonLd = {
             url: SITE_URL,
             logo: {
                 "@type": "ImageObject",
-                url: `${SITE_URL}/logo/Logo_Fast_Clube_Black_Orange.png`,
+                url: `${SITE_URL}/logo/Logo_Fast_Clube_Black.png`,
             },
             sameAs: [
                 "https://www.instagram.com/fastclub.run/",
