@@ -11,14 +11,14 @@ const journeyCards = [
         headline: "Seu primeiro passo merece ser marcado.",
         description:
             "Você está começando a correr e merece se sentir parte de algo maior. Nossos produtos para iniciantes celebram cada quilômetro conquistado.",
-        image: "/Image/Who Its For 1.webp",
+        image: "/Image/Testimonial_Ana L..webp",
     },
     {
         level: "Pro",
         headline: "Você treina como profissional. Vista-se como um.",
         description:
             "Para quem já compete e busca evolução constante. Produtos que representam sua dedicação e performance.",
-        image: "/Image/Who Its For 3.webp",
+        image: "/Image/Benefits 3.webp",
     },
 ];
 

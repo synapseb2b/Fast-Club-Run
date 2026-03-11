@@ -52,8 +52,9 @@ export function LojaLifestyle() {
                         variants={fadeInUp}
                         className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-white mb-6"
                     >
-                        Fast Club não é só um clube. É um{" "}
-                        <span className="text-primary">estilo de vida.</span>
+                        Fast Club não é só um clube.{" "}
+                        <br />
+                        É um <span className="text-primary">estilo de vida.</span>
                     </motion.h2>
 
                     {/* Subtitle */}

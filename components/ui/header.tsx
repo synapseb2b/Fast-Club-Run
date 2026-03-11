@@ -10,10 +10,10 @@ import { cn } from "@/lib/utils";
 const navLinks = [
     { href: "#how-it-works", label: "Como Funciona" },
     { href: "#who-its-for", label: "Para Quem" },
-    { href: "/corridas", label: "Corridas" },
-    { href: "/loja", label: "Loja" },
     { href: "#pricing", label: "Planos" },
     { href: "#faq", label: "Dúvidas" },
+    { href: "/corridas", label: "Corridas" },
+    { href: "/loja", label: "Loja" },
 ];
 
 function NavLink({ href, className, onClick, children }: { href: string; className?: string; onClick?: () => void; children: React.ReactNode }) {

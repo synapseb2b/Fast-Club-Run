@@ -7,18 +7,18 @@ import Image from "next/image"
 const gallery = [
   {
     image: "/Image/Who Its For 1.webp",
-    title: "Iniciantes",
+    title: "Para Quem Quer Começar",
     subtitle: "Cada primeiro passo conta.",
   },
   {
     image: "/Image/Who Its For 2.webp",
-    title: "Competidores",
+    title: "Para Quem Quer Evoluir",
     subtitle: "Supere seus limites.",
   },
   {
     image: "/Image/Who Its For 3.webp",
-    title: "Comunidade",
-    subtitle: "Juntos somos mais fortes.",
+    title: "Para Quem Quer Competir",
+    subtitle: "Supere-se.",
   },
 ]
 

@@ -58,7 +58,7 @@ export function CorridasHero() {
           {/* Subtitle */}
           <motion.p
             variants={fadeInUp}
-            className="text-base md:text-lg lg:text-xl text-white/70 max-w-2xl mb-10"
+            className="text-base md:text-lg lg:text-xl text-white/70 max-w-4xl mb-10"
           >
             Três percursos. Uma comunidade. A primeira corrida Fast Club Run em
             Sete Lagoas.
