@@ -5,6 +5,7 @@ export interface Product {
     level: "iniciante" | "pro";
     gender: "masculino" | "feminino";
     image: string;
+    objectPosition: string;
     whatsappMessage: string;
 }
 
@@ -18,6 +19,7 @@ export const products: Product[] = [
         level: "iniciante",
         gender: "feminino",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_iniciante_feminino.webp",
+        objectPosition: "center 15%",
         whatsappMessage: "Olá! Tenho interesse na Camiseta Iniciante Feminina do Fast Club Run.",
     },
     {
@@ -27,6 +29,7 @@ export const products: Product[] = [
         level: "iniciante",
         gender: "masculino",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_iniciante_masculino_1.webp",
+        objectPosition: "center 10%",
         whatsappMessage: "Olá! Tenho interesse na Camiseta Iniciante Masculina do Fast Club Run.",
     },
     {
@@ -36,6 +39,7 @@ export const products: Product[] = [
         level: "pro",
         gender: "feminino",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_pro_feminino.webp",
+        objectPosition: "center 10%",
         whatsappMessage: "Olá! Tenho interesse na Camiseta Pro Feminina do Fast Club Run.",
     },
     {
@@ -45,6 +49,7 @@ export const products: Product[] = [
         level: "pro",
         gender: "masculino",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_pro_masculino.webp",
+        objectPosition: "center 10%",
         whatsappMessage: "Olá! Tenho interesse na Camiseta Pro Masculina do Fast Club Run.",
     },
     {
@@ -54,6 +59,7 @@ export const products: Product[] = [
         level: "iniciante",
         gender: "feminino",
         image: "/Image/Produtos_Fast_Club_Run/meia_iniciante_feminino.webp",
+        objectPosition: "center center",
         whatsappMessage: "Olá! Tenho interesse na Meia Iniciante Feminina do Fast Club Run.",
     },
     {
@@ -63,6 +69,7 @@ export const products: Product[] = [
         level: "iniciante",
         gender: "masculino",
         image: "/Image/Produtos_Fast_Club_Run/meia_iniciante_masculino_1.webp",
+        objectPosition: "center center",
         whatsappMessage: "Olá! Tenho interesse na Meia Iniciante Masculina do Fast Club Run.",
     },
     {
@@ -72,6 +79,7 @@ export const products: Product[] = [
         level: "pro",
         gender: "feminino",
         image: "/Image/Produtos_Fast_Club_Run/meia_pro_feminino.webp",
+        objectPosition: "center center",
         whatsappMessage: "Olá! Tenho interesse na Meia Pro Feminina do Fast Club Run.",
     },
     {
@@ -81,6 +89,7 @@ export const products: Product[] = [
         level: "pro",
         gender: "masculino",
         image: "/Image/Produtos_Fast_Club_Run/meia_pro_masculino.webp",
+        objectPosition: "center center",
         whatsappMessage: "Olá! Tenho interesse na Meia Pro Masculina do Fast Club Run.",
     },
 ];

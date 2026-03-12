@@ -26,7 +26,11 @@
       "Bash(node -e \":*)",
       "Bash(find /c/Users/Cliente/GitHub/clientes/Fast-Club-Run -name tailwind.config.* -type f)",
       "WebFetch(domain:docs.google.com)",
-      "Bash(pandoc \"D:/Dados/Documentos/Downloads/FastClub_Revenue_Playbook.docx\" -t markdown --wrap=none)"
+      "Bash(pandoc \"D:/Dados/Documentos/Downloads/FastClub_Revenue_Playbook.docx\" -t markdown --wrap=none)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npm:*)",
+      "Bash(where npx:*)",
+      "Bash(where node:*)"
     ]
   }
 }

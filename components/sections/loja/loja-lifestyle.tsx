@@ -6,11 +6,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const images = [
-    { src: "/Image/Pos hero 1.webp", alt: "Fast Club Lifestyle" },
-    { src: "/Image/Pos hero 2.webp", alt: "Corrida em Grupo" },
-    { src: "/Image/Pos Hero 3.webp", alt: "Performance" },
-    { src: "/Image/Pos hero 4.webp", alt: "Comunidade" },
-    { src: "/Image/Pos hero 1.webp", alt: "Loop Flow" },
+    { src: "/Image/Pos hero 1.webp", alt: "Fast Club Lifestyle", objectPosition: "center 20%" },
+    { src: "/Image/Pos hero 2.webp", alt: "Corrida em Grupo", objectPosition: "center 25%" },
+    { src: "/Image/Pos Hero 3.webp", alt: "Performance", objectPosition: "center 20%" },
+    { src: "/Image/Pos hero 4.webp", alt: "Comunidade", objectPosition: "center 25%" },
+    { src: "/Image/Pos hero 1.webp", alt: "Loop Flow", objectPosition: "center 20%" },
 ];
 
 export function LojaLifestyle() {
@@ -84,6 +84,7 @@ export function LojaLifestyle() {
                                 alt={image.alt}
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700"
+                                style={{ objectPosition: image.objectPosition }}
                                 sizes="(max-width: 768px) 75vw, 25vw"
                                 draggable={false}
                             />

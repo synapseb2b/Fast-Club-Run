@@ -12,7 +12,7 @@ const journeyCards = [
         description:
             "Você está começando a correr e merece se sentir parte de algo maior. Nossos produtos para iniciantes celebram cada quilômetro conquistado.",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_iniciante_feminino.webp",
-        objectPosition: "center 20%",
+        objectPosition: "center 15%",
     },
     {
         level: "Pro",
@@ -20,7 +20,7 @@ const journeyCards = [
         description:
             "Para quem já compete e busca evolução constante. Produtos que representam sua dedicação e performance.",
         image: "/Image/Produtos_Fast_Club_Run/camiseta_pro_feminino.webp",
-        objectPosition: "center 15%",
+        objectPosition: "center 8%",
     },
 ];
 
